@@ -1,0 +1,324 @@
+/* 
+*Обнуление 
+*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height:100%;
+    line-height: 1;
+    font-size: 16px;
+    color:black;
+}
+
+.wrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    width:100%;
+    font-family: "TTLakes";
+    font-weight:400;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+/*
+* Шапка
+*/
+.wrapper--header {
+    border-bottom: 1px solid #D9FFF5;
+    max-height: 88px;
+}
+.menu--style {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    margin: 18.59px 16px 18.59px 16px;
+    
+}
+.menu__button {
+    color: #1B1C21;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    margin-right:16px;
+    cursor: pointer;
+    background-color: inherit;
+}
+.menu__button:hover {
+    opacity: 0.7;
+    
+}
+.divider {
+    margin:0 20px 0 4px;
+}
+
+.logo-link {
+    margin-right: 12px;
+}
+/*
+* Заголовок + две кнопки
+*/
+.wrapper--main {
+    display: flex;
+    max-height:100%;
+    background-color: #F8F8F8;
+}
+
+.title__text{
+    margin:24px 0 24px 0;
+    align-items: center;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+}
+.title__text::before{
+    content: url(/img/highlight.svg);
+    margin-right:12px;
+}
+/*
+* Лист кнопок с невидимым скроллом (меню услуг)
+*/
+.wrapper--scroll {
+    padding:0 16px 32px 16px;
+    justify-content: space-between;
+}
+.scroll__list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+}
+.scroll__list-item {
+    white-space: nowrap;
+    font-weight: 500;
+    line-height: 24px;
+}
+.scroll__button {
+    color: #7E7E82;
+    border: 2px solid #f8f8f8;
+    padding: 9px;
+    background-color: inherit;
+    cursor: pointer;
+}
+.scroll__button:focus {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background-color: white;
+}
+/*
+* Текст + Картинка
+*/
+.wrapper--about {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about__text {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 288px;
+    letter-spacing: 0.2px;
+}
+.about__button--read-more {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    font-weight: 500;
+    color:  inherit;
+    align-items: center;
+    background-color: inherit;
+    width:125px;
+    margin: 10px 0 16px 0;
+    cursor: pointer;
+}
+.read-more {
+    margin-right:8px;
+}
+.about__image {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+* Версия для Мобильных Устройств
+*/
+
+@media (min-width: 0px) and (max-width: 540px) {
+    .wrapper {
+        max-width: 320px;
+    }
+    .divider--left {
+        display: none;
+    }
+    .menu__button--tablet {
+        display: none;
+    }
+    .title__button {
+        display: none;
+    }
+    .scroll__list {
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-mask: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 1) 50%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%
+          );
+    }
+    .scroll__list::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+        }
+        .about__text{
+            margin:0 16px 16px 16px;
+        }
+    }
+/*
+* Версия для Планшета
+*/
+    @media (min-width: 541px) and (max-width: 846px) {
+        .wrapper {
+            max-width: 768px;
+        }
+        .menu--style {
+            width: 736px;
+            margin-left:24px;
+            margin-right:8px;
+        }
+        .logo-link {
+            margin-right:auto;
+        }
+        .title__button {
+            display: none;
+        }
+        .scroll__list {
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-mask: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 1) 50%,
+                rgba(0, 0, 0, 1) 90%,
+                rgba(0, 0, 0, 0) 100%
+              );
+        }
+        .scroll__list::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        .wrapper--scroll{
+            padding-left:25px;
+        }
+        .wrapper--about{
+            width: 720px;
+            margin:0 25px 40px 24px;
+        }
+        .about__text {
+            max-width:312px;
+            line-height: 20px;
+        }
+        .about__button::before {
+            content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера";
+        }
+        .about__image {
+            max-width: 360px;
+        }
+        }
+/*
+* Версия для ПК
+*/
+@media (min-width: 847px) and (max-width: 1240px) {
+    .wrapper {
+        max-width: 1120px;
+    }
+    .wrapper--header{
+        display: none;
+    }
+    .title__text{
+        margin-top: 42px;
+    }
+    
+    .title__text::before{
+        margin-right:30px;
+    }
+    .title__button{
+        display: flex;
+        margin-left:auto;
+    }
+    .title__button--desktop {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        width: 180px;
+        align-items: center;
+    }
+    .title__btn-img {
+        margin-left:8px;
+    }
+    .wrapper--scroll{
+        max-width: 1120px;
+        padding:0 25px 7px 32px;
+    }
+    .scroll__list {
+        flex-wrap: wrap;
+    }
+    .scroll__button {
+        padding:8.63px 17px 7.37px 16.25px;
+    }
+    .wrapper--about{
+        max-width: 1120px;
+        padding:0 28.65px 40px 34px;
+    }
+    .about{
+        width:1120px;
+    }
+    .about__text {
+        margin-top: 9.22px;
+        line-height: 20px;
+        max-width:490px;
+    }
+    .about__button::before {
+        content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
+    }
+    .about__image {
+        max-width: 531.35px;
+    }
+}
