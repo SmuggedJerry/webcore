@@ -103,7 +103,7 @@ body {
     display: -ms-flex;
 }
 .title__text::before{
-    content: url(/img/highlight.svg);
+    content: url(../img/highlight.svg);
     margin-right:12px;
 }
 /*
@@ -189,8 +189,8 @@ body {
         display: none;
     }
     .scroll__list {
-        overflow-x: auto;
-        scrollbar-width: none;
+        overflow-x: scroll;
+        -webkit-scrollbar-width: none;
         -webkit-mask: linear-gradient(
             to right,
             rgba(0, 0, 0, 1) 50%,
@@ -261,7 +261,7 @@ body {
 /*
 * Версия для ПК
 */
-@media (min-width: 847px) and (max-width: 1240px) {
+@media (min-width: 847px) and (max-width: 1920px) {
     .wrapper {
         max-width: 1120px;
     }
