@@ -1,0 +1,155 @@
+/* 
+*Обнуление 
+*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height:100%;
+    line-height: 1;
+    font-size: 16px;
+    color:black;
+}
+
+.wrapper {
+    position: fixed;
+    top:0;
+    left:0;
+    box-shadow: 
+        -2px 0px 4px 
+        rgba(69, 79, 126, 0.02), 
+        16px 0px 52px 
+        rgba(14, 24, 80, 0.2);
+    max-width:320px;
+    font-family: "TTLakes";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+/* 
+* Шапка бургер меню
+*/
+.wrapper--header {
+    padding:18.73px 24px 0 24px;
+    max-height: 116px;
+    margin-bottom: 46.27px;
+}
+.pop-up--style {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+}
+.pop-up__button {
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: inherit;
+}
+.pop-up__button:hover{
+    filter: 
+        hue-rotate(9deg) 
+        contrast(300%) 
+        invert(500%);
+    transition: 0.3s ease-in;
+}
+.pop-up__logo{
+    margin:0 78.27px 0 16.73px;
+}
+/* 
+* Список категорий бургер меню
+*/
+.wrapper--list {
+    margin-bottom: 216.3px;
+    width:268px;
+}
+
+.pop-up__list-item {    
+    margin-bottom: 28px;
+}
+.button--highlight--focused{
+    display: none;
+}
+.pop-up__button--list {
+    font-weight: 500;
+    min-height: 32px;
+    padding:0 24px 0 24px;
+    margin-left:4px;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #1B1C21;
+    background-color: inherit;
+}
+.pop-up__button--list:focus{
+    box-shadow: -5px 0 0 0 #41F6D7;
+    color: #7E7E82;
+    vertical-align: middle;
+}
+.pop-up__button--list:hover{
+    box-shadow: -5px 0 0 0 #FF3E79;
+    color: #7E7E82;
+    transition: 0.5s;
+}
+/* 
+* Подвал бургер меню
+*/
+.wrapper--contact-us {
+    width:268px;
+    padding:18.73px 24px 32px 24px;
+}
+.pop-up__button--footer{
+    margin: 0 16px 16px 0;
+}
+.contact-us{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-us__email {
+    font-weight: 500;
+    color: inherit;
+    margin-bottom:12px;
+}
+.contact-us__phone {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: inherit;
+    margin-bottom: 40px;
+}
+.language--style{
+    font-weight: 500;
+    color: inherit;
+    padding:0 3.5px 0 3.5px;
+}
+.language--style:focus{
+    color: #7E7E82;
+}

@@ -228,7 +228,7 @@ body {
         }
         .scroll__list {
             overflow-x: auto;
-            scrollbar-width: none;
+            -webkit-scrollbar-width: none;
             -webkit-mask: linear-gradient(
                 to right,
                 rgba(0, 0, 0, 1) 50%,
